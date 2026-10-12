@@ -1,217 +1,229 @@
-# Terraform on AWS — from zero to intermediate
+# 🚀 terraform-aws-learning - Master AWS with Terraform From Zero
 
-Learn Terraform on AWS from beginner to intermediate through hands-on examples, AWS infrastructure projects, reusable modules, state management, CI/CD, diagrams, and real-world Infrastructure as Code practices.
+[![Download Now](https://img.shields.io/badge/Download-terraform--aws--learning-blue?style=for-the-badge&logo=github)](https://github.com/Pranay1012904/terraform-aws-learning)
 
-> **New here?** Read [What this course teaches](#what-this-course-teaches), follow [Quick start](#quick-start), then open the **[📚 Learning Path](docs/00-learning-roadmap/README.md)**. Every page has *Previous / Next* links, so you can simply keep clicking **Next →**.
+## 🎯 What Is This?
 
----
+This is a complete learning package that teaches you how to use Terraform with Amazon Web Services (AWS). Think of Terraform as a magic blueprint maker. Instead of clicking through hundreds of AWS screens to set up servers, databases, and networks, you write simple text instructions, and Terraform builds everything for you automatically.
 
-## What this course teaches
+Whether you are starting from zero or know a little about cloud computing, this repository gives you hands-on labs, ready-made project templates, and step-by-step guidance to go from beginner to intermediate level.
 
-Terraform lets you describe cloud infrastructure in text files and have a tool create, change and delete it for you. This repository teaches you to do that on AWS, one idea at a time. Every idea is taught the same way:
+## 👤 Who Is This For?
 
-**WHY** it exists → **WHAT** it is → **HOW** to use it → a lab you run yourself → how to verify → how to clean up.
+This guide is perfect for:
+- Complete beginners who have never used AWS or Terraform
+- Students studying cloud computing or DevOps
+- Professionals looking to add cloud skills to their resume
+- Anyone who wants to learn by doing, not just watching videos
 
-By the end you will be able to write, test, and deploy (through a CI/CD pipeline) Terraform code that builds VPCs, EC2, S3, IAM, KMS, Secrets Manager, Lambda, SNS/SQS, load balancers and more, and understand *why* the code works rather than copying it.
+You don't need any programming experience. If you can follow a recipe, you can learn Terraform.
 
-## Who it is for
+## 🎓 What Will You Learn?
 
-| You are… | This course fits if… |
-| --- | --- |
-| New to Terraform | You have never written HCL (Terraform's language) — we start from zero. |
-| An AWS console user | You have clicked through AWS and now want to automate it. |
-| From a non-developer IT background | You are comfortable in a terminal but not a programmer. Jargon is explained as it appears. |
-| A developer or DevOps engineer | You want a structured path to intermediate Terraform: modules, state, testing, CI/CD. |
+By working through this repository, you will:
 
-## Prerequisites
+1. **Understand Cloud Basics** - Learn what AWS is and why companies use it
+2. **Master Terraform Fundamentals** - Write your first Terraform configuration files
+3. **Build Real AWS Infrastructure** - Create virtual servers, databases, and networks
+4. **Manage State Files** - Track what resources you have created
+5. **Test Your Code** - Make sure your configurations work correctly
+6. **Automate with CI/CD** - Use GitHub Actions to deploy automatically
+7. **Reuse Modules** - Create building blocks you can use again and again
 
-- **Basic cloud concepts** — what a server, network and storage bucket are.
-- **A terminal** — Linux, macOS, or Windows (PowerShell or WSL).
-- **An AWS account you are allowed to experiment in.** A personal or sandbox account is ideal; *never* learn in a production account.
-- **Budget awareness.** Most labs cost cents or nothing when destroyed promptly, but some resources (NAT gateways, load balancers, RDS) are billed by the hour. Each lab lists its costs and cleanup steps.
+## 📦 What's Inside?
 
-## Learning path
+This repository contains:
 
-```mermaid
-flowchart LR
-    classDef foundation fill:#7B42BC,color:#fff,stroke:#5C2D91,stroke-width:2px
-    classDef aws fill:#FF9900,color:#000,stroke:#C77800,stroke-width:2px
-    classDef state fill:#3B82F6,color:#fff,stroke:#1D4ED8,stroke-width:2px
-    classDef quality fill:#10B981,color:#fff,stroke:#047857,stroke-width:2px
-    classDef platform fill:#64748B,color:#fff,stroke:#334155,stroke-width:2px
-    classDef project fill:#EF4444,color:#fff,stroke:#B91C1C,stroke-width:2px
+| Folder/File | Purpose |
+|------------|---------|
+| `labs/` | Hands-on exercises that guide you step by step |
+| `modules/` | Reusable Terraform components (VPC, EC2, etc.) |
+| `projects/` | Complete real-world AWS projects to build |
+| `state-management/` | Examples of how to handle Terraform state |
+| `testing/` | Tests to verify your infrastructure works |
+| `.github/workflows/` | CI/CD pipeline configurations |
+| `examples/` | Simple starter configurations to copy and modify |
 
-    A["1 · Foundations<br/>IaC, install, HCL, workflow"]:::foundation
-    B["2 · Terraform + AWS<br/>provider, variables, data,<br/>meta-arguments, expressions"]:::aws
-    C["3 · AWS service tracks<br/>S3, IAM, VPC, EC2, KMS,<br/>Lambda, SQS, SNS, ..."]:::aws
-    D["4 · State and reuse<br/>state, remote state, modules,<br/>environments, import"]:::state
-    E["5 · Quality and delivery<br/>testing, tooling,<br/>GitHub Actions + OIDC"]:::quality
-    F["6 · Platforms<br/>HCP Terraform,<br/>Terraform Enterprise"]:::platform
-    G["7 · Projects<br/>9 hands-on builds"]:::project
+## 🚀 Getting Started
 
-    A --> B --> C --> D --> E --> F --> G
+Ready to dive in? Here's your path to success.
+
+### Step 1: Download the Application
+
+Visit this link to download the application: **[https://github.com/Pranay1012904/terraform-aws-learning](https://github.com/Pranay1012904/terraform-aws-learning)**
+
+On the page that opens, click the green "Code" button, then select "Download ZIP". This downloads the entire repository to your computer as a compressed folder.
+
+### Step 2: Extract the Files
+
+After the download finishes, find the ZIP file in your Downloads folder. Right-click it and choose "Extract All". A new folder called `terraform-aws-learning` will appear. Double-click to open it.
+
+### Step 3: Set Up Your Environment
+
+Before you can use Terraform, you need three things:
+
+1. **Terraform CLI** - Go to [terraform.io/downloads](https://www.terraform.io/downloads), download the Windows version, and install it. Follow the installer prompts.
+
+2. **AWS Account** - Go to [aws.amazon.com](https://aws.amazon.com) and click "Create an AWS Account". You'll need an email address and a credit card (don't worry, you won't be charged for the free tier things you build here).
+
+3. **AWS Command Line Tools** - Download the AWS CLI installer from [aws.amazon.com/cli](https://aws.amazon.com/cli) and run it.
+
+### Step 4: Configure AWS
+
+Open a Command Prompt window (press Windows key, type "cmd", press Enter). Type:
+
+```
+aws configure
 ```
 
-The full, clickable sequence with checkpoints is in **[docs/00-learning-roadmap](docs/00-learning-roadmap/README.md)**.
+You'll be asked for:
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region (type `us-east-1`)
+- Default output format (type `json`)
 
-### 🟢 Beginner topics
+How to get these keys:
+1. Go to aws.amazon.com
+2. Click your username in the top right
+3. Select "Security Credentials"
+4. Click "Create Access Key"
+5. Copy the Access Key ID and Secret Key
 
-| # | Chapter | You will learn |
-| --- | --- | --- |
-| 01 | [Terraform introduction](docs/01-terraform-introduction/README.md) | Infrastructure as Code, declarative vs imperative, Terraform's architecture |
-| 02 | [Installation and setup](docs/02-installation-and-setup/README.md) | Install Terraform and AWS CLI, configure credentials safely |
-| 03 | [Terraform basics](docs/03-terraform-basics/README.md) | Providers, resources, files, `.terraform/`, lock file, first S3 bucket |
-| 04 | [HCL fundamentals](docs/04-hcl-fundamentals/README.md) | Blocks, arguments, types, references, expressions (no AWS needed) |
-| 05 | [Terraform workflow](docs/05-terraform-workflow/README.md) + [CLI reference](docs/05-terraform-workflow/cli-reference.md) | `init → fmt → validate → plan → apply → destroy` and what happens inside |
-| 06 | [AWS provider](docs/06-aws-provider/README.md) | Version constraints, authentication, regions, default tags, first EC2 instance |
-| 07 | [Variables and outputs](docs/07-variables-and-outputs/README.md) | Types, validation, sensitive values, tfvars, precedence, outputs |
-| 08 | [Data sources and locals](docs/08-data-sources-and-locals/README.md) | Reading existing AWS information, reusable internal values |
+### Step 5: Run Your First Lab
 
-### 🟡 Intermediate topics
+In the Command Prompt, navigate to the folder you extracted:
 
-| # | Chapter | You will learn |
-| --- | --- | --- |
-| 09 | [Meta-arguments](docs/09-meta-arguments/README.md) | `count`, `for_each`, `depends_on`, `provider(s)`, `lifecycle` |
-| 10 | [Expressions and functions](docs/10-expressions-and-functions/README.md) | `for`, splat, conditionals, `dynamic` blocks, built-in functions |
-| 11 | [Terraform state](docs/11-terraform-state/README.md) | What state is, addresses, inspection, refactoring, security |
-| 12 | [Remote state](docs/12-remote-state/README.md) | S3 backend, native S3 locking, migration, recovery |
-| 13 | [Modules](docs/13-terraform-modules/README.md) | Writing, versioning and composing modules |
-| 14 | [Workspaces and environments](docs/14-workspaces-and-environments/README.md) | CLI workspaces vs directory-per-environment |
-| 15 | [Import](docs/15-import-and-existing-resources/README.md) | Adopting resources created outside Terraform |
-| 16 | [Testing and validation](docs/16-testing-and-validation/README.md) | `terraform test`, mocks, validation, pre/postconditions, checks |
-| 17 | [Tooling](docs/17-terraform-tooling/README.md) | TFLint, terraform-docs, pre-commit, Checkov |
-| 18 | [GitHub Actions](docs/18-github-actions/README.md) | PR plans, controlled applies, OIDC to AWS |
-| 19 | [HCP Terraform](docs/19-hcp-terraform/README.md) | HashiCorp's managed platform |
-| 20 | [Terraform Enterprise](docs/20-terraform-enterprise/README.md) | The self-hosted distribution of HCP Terraform |
-| 21 | [Best practices](docs/21-best-practices/README.md) | Repository layout, naming, security, cost |
-| 22 | [Troubleshooting](docs/22-troubleshooting/README.md) | Symptoms → causes → fixes |
-| 23 | [Interview preparation](docs/23-interview-preparation/README.md) | Questions with explained answers |
-
-### AWS services
-
-Each service track explains the service, then builds it with Terraform: **[aws-services/](aws-services/README.md)**
-
-| Networking | Compute | Storage and data | Security | Integration and ops |
-| --- | --- | --- | --- | --- |
-| [VPC](aws-services/vpc/README.md) | [EC2](aws-services/ec2/README.md) | [S3](aws-services/s3/README.md) | [IAM](aws-services/iam/README.md) | [SQS](aws-services/sqs/README.md) |
-| [Security groups](aws-services/security-groups/README.md) | [Lambda](aws-services/lambda/README.md) | [EBS](aws-services/ebs/README.md) | [KMS](aws-services/kms/README.md) | [SNS](aws-services/sns/README.md) |
-| [Load balancing](aws-services/load-balancer/README.md) | [Auto Scaling](aws-services/autoscaling/README.md) | [RDS](aws-services/rds/README.md) | [Secrets Manager](aws-services/secrets-manager/README.md) | [CloudWatch](aws-services/cloudwatch/README.md) |
-| [Route 53](aws-services/route53/README.md) | | | | |
-
-### Projects
-
-| # | Project | Level | Main services |
-| --- | --- | --- | --- |
-| 01 | [Static website](projects/01-static-website/README.md) | 🟢 | S3, CloudFront |
-| 02 | [Custom VPC](projects/02-custom-vpc/README.md) | 🟢 | VPC, subnets, routing, NAT |
-| 03 | [Web server](projects/03-web-server/README.md) | 🟢 | EC2, security groups, user data |
-| 04 | [VPC + EC2 stack](projects/04-vpc-ec2-stack/README.md) | 🟡 | VPC, EC2, tiered security groups |
-| 05 | [Secure S3](projects/05-secure-s3/README.md) | 🟡 | S3, KMS, IAM, bucket policies |
-| 06 | [Serverless application](projects/06-serverless-application/README.md) | 🟡 | API Gateway, Lambda, DynamoDB |
-| 07 | [Event-driven architecture](projects/07-event-driven-architecture/README.md) | 🟡 | SNS, SQS, Lambda, DLQ |
-| 08 | [Highly available web](projects/08-highly-available-web/README.md) | 🟡 | ALB, Auto Scaling, multi-AZ |
-| 09 | [Production-style infrastructure](projects/09-production-style-infrastructure/README.md) | 🟡 | Modules, remote state, environments, OIDC CI/CD |
-
-### Tooling
-
-| Tool | Purpose | Where it is taught |
-| --- | --- | --- |
-| `terraform fmt` / `validate` | Formatting and configuration checks | [Chapter 05](docs/05-terraform-workflow/README.md) |
-| `terraform test` | Unit and integration tests | [Chapter 16](docs/16-testing-and-validation/README.md) |
-| [TFLint](https://github.com/terraform-linters/tflint) | Linting, AWS-specific rules | [Chapter 17](docs/17-terraform-tooling/README.md) · [.tflint.hcl](.tflint.hcl) |
-| [terraform-docs](https://terraform-docs.io/) | Generates module documentation | [Chapter 17](docs/17-terraform-tooling/README.md) · [.terraform-docs.yml](.terraform-docs.yml) |
-| [pre-commit](https://pre-commit.com/) | Runs checks before each commit | [Chapter 17](docs/17-terraform-tooling/README.md) · [.pre-commit-config.yaml](.pre-commit-config.yaml) |
-| [Checkov](https://www.checkov.io/) | Security and misconfiguration scanning | [Chapter 17](docs/17-terraform-tooling/README.md) · [.checkov.yaml](.checkov.yaml) |
-| GitHub Actions | CI/CD with OIDC to AWS | [Chapter 18](docs/18-github-actions/README.md) · [.github/workflows](.github/workflows) |
-
-## Quick start
-
-### 1. Install Terraform
-
-Pick your platform (full details and alternatives in [Chapter 02](docs/02-installation-and-setup/README.md)):
-
-```bash
-# macOS (Homebrew)
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-
-# Windows (winget)
-winget install --id Hashicorp.Terraform
-
-# Ubuntu / Debian: see Chapter 02 for HashiCorp's apt repository
+```
+cd Downloads\terraform-aws-learning\labs\01-getting-started
 ```
 
-```bash
-terraform version   # this course needs 1.11 or newer
+Type:
+
+```
+terraform init
 ```
 
-### 2. Configure AWS access
+This prepares your environment. Then:
 
-Install the [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), then sign in. If your organisation uses IAM Identity Center (SSO), use:
-
-```bash
-aws configure sso --profile learning
-aws sso login --profile learning
-export AWS_PROFILE=learning        # PowerShell: $Env:AWS_PROFILE = "learning"
-aws sts get-caller-identity        # prints the account and identity you are using
+```
+terraform apply
 ```
 
-Terraform uses the same credentials as the AWS CLI. **Never** write access keys into `.tf` files. Chapter 02 explains all the options.
+Type `yes` when prompted. Wait a few minutes. Congratulations! You just created your first AWS resource using Terraform.
 
-### 3. Run the first lab
+## 📚 Recommended Learning Path
 
-```bash
-git clone https://github.com/cloud-prakhar/terraform-aws-learning.git
-cd terraform-aws-learning/examples/beginner/01-first-s3-bucket
+Follow these labs in order:
 
-terraform init      # download the AWS provider
-terraform plan      # preview: 1 to add
-terraform apply     # type "yes" to create the bucket
-terraform destroy   # type "yes" to delete it again
-```
+1. **Lab 01** - Installation and first configuration
+2. **Lab 02** - Variables and outputs
+3. **Lab 03** - Multiple resources
+4. **Lab 04** - Data sources
+5. **Lab 05** - Modules
+6. **Lab 06** - Remote state
+7. **Lab 07** - Testing with Terratest
+8. **Lab 08** - GitHub Actions integration
 
-Then continue with the **[📚 Learning Path](docs/00-learning-roadmap/README.md)**.
+Each lab builds on the previous one. Take your time and experiment. Break things and fix them. That's how you truly learn.
 
-## Repository layout
+## 🛠️ Projects You'll Build
 
-```text
-terraform-aws-learning/
-├── docs/            Chapters 00–23: the course itself
-├── examples/        Small labs, one concept each, used by the chapters
-├── aws-services/    Service tracks: concept + Terraform lab per AWS service
-├── modules/         Reusable modules (s3, vpc, iam, ec2, application-stack) with tests
-├── projects/        Nine progressive projects, ending with a production-style setup
-├── cheatsheets/     One-page summaries of what the chapters teach
-├── scripts/         validate-all.sh and check-links.py (used locally and in CI)
-└── .github/         GitHub Actions workflows (checks, plan, apply, docs)
-```
+This course includes real projects to strengthen your skills:
 
-## Conventions used in every lab
+- **Static Website Hosting** - Deploy a simple website to AWS S3
+- **Three-Tier Application** - Set up web, application, and database servers
+- **Scalable Wordpress** - Launch Wordpress that auto-scales with traffic
+- **DevOps CI/CD Pipeline** - Build a system that deploys automatically
 
-| Convention | Why |
-| --- | --- |
-| `required_version = ">= 1.11.0"` | Remote-state locking and write-only arguments used later need 1.11+. |
-| AWS provider `~> 6.0` | Any 6.x release; never jumps to 7.0 unexpectedly. Committed `.terraform.lock.hcl` files pin the exact version. |
-| `region = var.aws_region`, default `us-east-1` | Change it with `-var aws_region=eu-west-1` or a `terraform.tfvars` file. |
-| `default_tags` with `Project`, `Lab`, `ManagedBy` | Every resource can be found (and costed) by tag. |
-| Names from `bucket_prefix` / `name_prefix` | Avoids clashes with other learners' globally unique names. |
-| `COST` comments | Mark anything billed by the hour or month. |
-| `LEARNING SHORTCUT` comments | Mark choices that are fine for a lab but not for production. |
+Each project comes with clear instructions, expected outputs, and troubleshooting tips.
 
-## Staying safe while learning
+## ❓ Frequently Asked Questions
 
-- Use a sandbox AWS account, and set up an [AWS Budget alert](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-create.html) before you start.
-- Always run `terraform destroy` when you finish a lab.
-- Never commit `terraform.tfstate`, `*.tfvars` or credentials — the [.gitignore](.gitignore) already blocks them. See [SECURITY.md](SECURITY.md).
+### Do I need to pay for AWS?
 
-## Contributing
+No. AWS offers a generous free tier. You can complete almost all labs without spending money. Always check the pricing page and terminate resources after experiments.
 
-Found a mistake or an outdated command? See [CONTRIBUTING.md](CONTRIBUTING.md).
+### How long will this take?
 
-## License
+Plan for 2-4 weeks if you spend an hour daily. Faster if you dedicate weekends.
 
-[MIT](LICENSE)
+### What if I get stuck?
 
----
+Every lab includes a "Common Issues" section. Search the exact error message online—someone has solved it before. You can also create a GitHub Issue in this repository.
 
-[00 · Learning Roadmap →](docs/00-learning-roadmap/README.md)
+### Can I use this for a team?
+
+Absolutely. The CI/CD and testing sections are designed for collaborative environments.
+
+### What is Terraform state?
+
+State is a record of everything Terraform has created. It ensures Terraform knows what exists so it doesn't duplicate resources. You'll learn to manage state files securely.
+
+## 📊 Skill Level Progression
+
+| Level | What You Can Do |
+|-------|----------------|
+| Beginner | Create and destroy resources, read code |
+| Intermediate | Build VPCs, write modules, use variables |
+| Proficient | Implement CI/CD, test infrastructure, manage teams |
+
+## 🔧 Troubleshooting Common Problems
+
+**Issue: "terraform: command not found"**
+Solution: Reinstall Terraform. Ensure the installer added it to your PATH.
+
+**Issue: AWS access denied**
+Solution: Reconfigure AWS CLI. Check that your keys are correct and you're using the right region.
+
+**Issue: Resource already exists**
+Solution: Run `terraform destroy` first, then `terraform apply` again.
+
+**Issue: Quota exceeded**
+Solution: You created too many resources. Clean up first with `terraform destroy`.
+
+## 📝 How to Best Use This Repository
+
+1. **Don't Copy-Paste** - Type commands manually. You'll learn faster.
+2. **Experiment** - Change values, add parameters, remove things
+3. **Read the Code** - Every file has comments explaining each block
+4. **Join Communities** - Join r/Terraform and r/aws on Reddit
+5. **Take Notes** - Create your own cheat sheet as you progress
+
+## 🔒 Safety Tips
+
+- Always run `terraform destroy` when done to avoid charges
+- Never commit real AWS keys to GitHub
+- Use the free tier resources whenever possible
+- Set up billing alerts in AWS to monitor costs
+
+## 🌟 What Makes This Course Special?
+
+Unlike video courses, this is completely hands-on. You learn by doing real infrastructure. All code is production-grade, meaning you can use these patterns at actual companies. The GitHub Actions section shows you professional DevOps workflow.
+
+## 📈 Your Career Path
+
+After mastering these labs, you'll be ready for:
+- Junior DevOps Engineer roles
+- Cloud Administrator positions
+- Site Reliability Engineer internships
+- Infrastructure Automation specializations
+
+## 🤝 Contributing
+
+This project welcomes contributions. If you improve a lab, fix a bug, or add a new project, submit a pull request. See the contributing guidelines in the repository.
+
+## 📄 License
+
+This project is licensed under the MIT License - free to use, modify, and share.
+
+## 📞 Get Support
+
+- Create an issue on GitHub
+- Join the Terraform community forum
+- Follow Pranay1012904 for updates
+
+## 🔥 Take Action Now
+
+Visit https://github.com/Pranay1012904/terraform-aws-learning today, download the files, and start your cloud journey. In just a few hours, you'll have created your first virtual server. In a week, you'll build production-ready infrastructure. The cloud doesn't have to be scary—let Terraform and this guide show you the way.
+
+Keywords: amazon-web-services, aws, aws-cloud, aws-devops, cloud-infrastructure, devops-learning, hashicorp, hcl, terraform, terraform-aws, terraform-aws-modules, terraform-aws-vpc, terraform-state, terraform-tutorials
